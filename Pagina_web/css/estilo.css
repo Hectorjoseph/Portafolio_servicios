@@ -14,21 +14,13 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
-h1 {
-    font-size: 3em;
-}
-
-h2 {
-    font-size: 2.5em;
-}
-
-h3 {
-    font-size: 1.5em;
-}
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 1.5em; }
 
 /* Encabezado y Navegación */
 header {
-    background-color: #ff4d4f; /* Rojo llamativo para captar atención */
+    background-color: #000080;
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -38,11 +30,10 @@ header {
 
 nav.contenedor {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    justify-content: space-between;
+    background-color: #00008B;
+    padding: 10px;
 }
 
 nav .logo img {
@@ -64,37 +55,55 @@ nav .enlaces a {
 }
 
 nav .enlaces a:hover {
-    background-color: #ffa940; /* Naranja para resaltar al pasar el cursor */
+    background-color: #009c8c;
 }
 
 nav .hamburguesa {
     display: none; /* Oculto para pantallas grandes */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+/* Menú desplegable para móviles */
+.menu-activo {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #00008B;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+
+.menu-activo a {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Sección de Hero */
 .hero {
-    background: linear-gradient(135deg, #ff7a45, #ff4d4f);
+    background: linear-gradient(135deg, #009c8c, #000080);
     color: #fff;
     text-align: center;
     padding: 80px 20px;
     background-size: cover;
 }
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
+.hero h1 { font-size: 3em; margin-bottom: 10px; }
+.hero p { font-size: 1.2em; margin-bottom: 20px; }
 
 .hero button {
     padding: 15px 30px;
     font-size: 1.2em;
     color: #fff;
-    background-color: #ffa940; /* Naranja llamativo */
+    background-color: #009c8c;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -102,7 +111,7 @@ nav .hamburguesa {
 }
 
 .hero button:hover {
-    background-color: #ff4d4f; /* Rojo para interacción */
+    background-color: #000080;
 }
 
 /* Sección de Servicios */
@@ -113,7 +122,7 @@ nav .hamburguesa {
 }
 
 #servicios h2 {
-    color: #ff4d4f;
+    color: #000080;
     margin-bottom: 30px;
 }
 
@@ -137,23 +146,13 @@ nav .hamburguesa {
     transform: scale(1.05);
 }
 
-.servicio h3 {
-    color: #ff4d4f;
-}
-
-.servicio ul {
-    list-style: none;
-    padding: 0;
-}
-
-.servicio ul li {
-    margin: 10px 0;
-    color: #555;
-}
+.servicio h3 { color: #000080; }
+.servicio ul { list-style: none; padding: 0; }
+.servicio ul li { margin: 10px 0; color: #555; }
 
 /* Sección de Contacto */
 #contacto {
-    background-color: #ff7a45;
+    background-color: #009c8c;
     padding: 60px 20px;
     color: #fff;
     text-align: center;
@@ -187,7 +186,7 @@ form input, form textarea {
 
 form button {
     background-color: #fff;
-    color: #ff4d4f;
+    color: #000080;
     border: none;
     padding: 15px 30px;
     font-size: 1em;
@@ -197,7 +196,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #ffa940;
+    background-color: #009c8c;
 }
 
 /* Sección de Preguntas Frecuentes */
@@ -208,7 +207,7 @@ form button:hover {
 }
 
 #faq h2 {
-    color: #ff4d4f;
+    color: #000080;
     margin-bottom: 30px;
 }
 
@@ -235,30 +234,22 @@ footer {
     text-align: center;
 }
 
-footer p {
-    margin: 10px 0;
-}
+footer p { margin: 10px 0; }
 
 footer .social-media a {
     margin: 0 10px;
-    color: #ffa940;
+    color: #009c8c;
     transition: color 0.3s ease;
 }
 
 footer .social-media a:hover {
-    color: #ff4d4f;
+    color: #000080;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav .enlaces {
-        display: none; /* Oculto para pantallas pequeñas */
-    }
-
-    nav .hamburguesa {
-        display: block; /* Mostrado solo en pantallas pequeñas */
-        cursor: pointer;
-    }
+    nav .enlaces { display: none; }
+    nav .hamburguesa { display: block; cursor: pointer; }
 
     .servicios-detalle {
         flex-direction: column;
