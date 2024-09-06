@@ -67,6 +67,22 @@ nav .hamburguesa {
     z-index: 10;
 }
 
+.hamburguesa {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50px; /* Ajusta el ancho del contenedor */
+    height: 50px; /* Ajusta el alto del contenedor */
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.hamburguesa img {
+    width: 30px; /* Cambia este valor al tamaño deseado */
+    height: 30px; /* Cambia este valor al tamaño deseado */
+}
+
 /* Menú desplegable para móviles */
 .menu-activo {
     display: block;
