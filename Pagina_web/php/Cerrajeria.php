@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/Servicios_emergencias.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
-  <title> Vidriería Servicios Emergencia </title>
+  <title> Cerrajería Servicios Emergencia </title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         </div>
 
         <div class="enlaces">
-            <a href="index.html">Inicio</a>
+            <a href="index.php">Inicio</a>
             <a href="#servicios">Acerca del Servicio</a>
             <a href="#expertos">Expertos</a>
         </div>
@@ -32,39 +32,40 @@
 
 <section id="inicio">
     <div class="hero">
-        <h1> Vidriería </h1>
+        <h1> Cerrajería </h1>
     </div>
 </section>
 
 <section id="servicios">
-    <h2>Acerca de Nuestros Servicios de Vidriería</h2>
+    <h2>Acerca de Nuestros Servicios de Cerrajería</h2>
     <p>
-        Ofrecemos una amplia gama de servicios de vidriería disponibles las 24 horas, adaptados a las necesidades de tu hogar o negocio. Desde la instalación de nuevos ventanales hasta reparaciones de emergencia, estamos listos para ayudarte.
+        Ofrecemos una amplia gama de servicios de cerrajería disponibles las 24 horas, adaptados a tus necesidades de seguridad. Nuestros expertos están capacitados para brindar soluciones rápidas y efectivas, desde aperturas de emergencia hasta la instalación de sistemas de seguridad avanzados.
     </p>
     <div class="servicios-disponibles">
         <h3>Servicios Disponibles:</h3>
         <ul>
-            <li>Instalación de ventanales y puertas de vidrio.</li>
-            <li>Reparación de vidrios rotos o dañados.</li>
-            <li>Vidrios templados y de seguridad para mayor protección.</li>
-            <li>Espejos a medida para cualquier ambiente.</li>
-            <li>Instalación de barandales de vidrio.</li>
-            <li>Reemplazo de ventanas rotas o dañadas.</li>
-            <li>Atención de emergencias de vidriería las 24 horas.</li>
+            <li>Apertura de puertas por pérdida de llaves.</li>
+            <li>Reparación y cambio de cerraduras dañadas.</li>
+            <li>Instalación de cerraduras de alta seguridad.</li>
+            <li>Sistemas de control de acceso para hogares y negocios.</li>
+            <li>Duplicado de llaves y creación de llaves maestras.</li>
+            <li>Instalación de puertas de seguridad y rejas.</li>
+            <li>Atención de emergencias las 24 horas del día.</li>
         </ul>
     </div>
     <p>
-        Nuestro equipo de vidrieros expertos está listo para ofrecerte atención de alta calidad, con garantía de seguridad y profesionalismo. Contáctanos para conocer más sobre nuestros servicios.
+        Nuestro equipo de cerrajeros certificados está siempre listo para ayudarte con soluciones seguras y eficientes. Contáctanos para conocer más sobre cómo mejorar la seguridad de tu hogar o negocio.
     </p>
 </section>
 
 <section id="expertos" class="expertos">
     <div class="contenedor">
         <h2>Conoce a Nuestros Expertos</h2>
+
         <!-- Primer Experto -->
         <div class="experto">
             <img src="experto1.jpg" alt="Foto del Experto 1">
-            <h3>Juan Pérez</h3>
+            <h3>Pedro García</h3>
             
             <!-- Rating interactivo -->
             <div class="rating" data-expert="1">
@@ -79,14 +80,14 @@
                 <input type="radio" id="star1-1" name="rating1" value="1">
                 <label for="star1-1">★</label>
             </div>
-            <p>Juan es experto en la instalación de vidrios templados y de seguridad, con más de 15 años de experiencia.</p>
-            <p><strong>Horario de trabajo:</strong> Lunes a Viernes de 8:00 am a 6:00 pm</p>
+            <p>Pedro es un experto en aperturas de puertas y sistemas de seguridad con más de 12 años de experiencia.</p>
+            <p><strong>Horario de trabajo:</strong> Lunes a Viernes de 9:00 am a 6:00 pm</p>
         </div>
 
         <!-- Segundo Experto -->
         <div class="experto">
             <img src="experto2.jpg" alt="Foto del Experto 2">
-            <h3>María Gómez</h3>
+            <h3>Lucía Fernández</h3>
             
             <!-- Rating interactivo -->
             <div class="rating" data-expert="1">
@@ -102,14 +103,14 @@
                 <label for="star1-2">★</label>
             </div>
 
-            <p>María es especialista en la reparación de vidrios rotos y espejos a medida, con más de 10 años de experiencia en proyectos comerciales.</p>
-            <p><strong>Horario de trabajo:</strong> Martes a Sábado de 9:00 am a 5:00 pm</p>
+            <p>Lucía es especialista en instalación de cerraduras de alta seguridad y sistemas de control de acceso, con más de 8 años de experiencia.</p>
+            <p><strong>Horario de trabajo:</strong> Martes a Sábado de 10:00 am a 7:00 pm</p>
         </div>
 
         <!-- Tercer Experto -->
         <div class="experto">
             <img src="experto3.jpg" alt="Foto del Experto 3">
-            <h3>Carlos Ruiz</h3>
+            <h3>Andrés López</h3>
 
             <!-- Rating interactivo -->
             <div class="rating" data-expert="1">
@@ -125,8 +126,8 @@
                 <label for="star1-3">★</label>
             </div>
             
-            <p>Carlos está especializado en la instalación de barandales de vidrio y reemplazo de ventanas, brindando soluciones modernas y seguras para el hogar.</p>
-            <p><strong>Horario de trabajo:</strong> Lunes, Miércoles y Viernes de 7:00 am a 3:00 pm</p>
+            <p>Andrés es especialista en puertas de seguridad y sistemas de protección avanzada, con más de 10 años brindando soluciones de alta calidad.</p>
+            <p><strong>Horario de trabajo:</strong> Lunes, Miércoles y Viernes de 8:00 am a 4:00 pm</p>
         </div>
     </div>
 </section>
