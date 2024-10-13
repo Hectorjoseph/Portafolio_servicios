@@ -1,0 +1,361 @@
+/* Estilos Generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 100px; /* Ajusta este valor según la altura del header */
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: #ffffff;
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 40px; }
+h3 { font-size: 24px; }
+
+/* Encabezado y Navegación */
+header {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Alinea el header en la parte superior */
+    left: 0; /* Alinea el header a la izquierda */
+    right: 0; /* Alinea el header a la derecha */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px; /* Puedes ajustar este valor si necesitas más o menos espacio */
+    background-color: #000080; /* Color hexadecimal */
+}
+
+.logo {
+    max-width: 80px; /* Convertido de 5rem a px */
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 16px; /* Convertido de 1rem a px */
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cambiar color al pasar el ratón por encima */
+.nav-list li a:hover {
+    background-color: #009c8c; /* Color hexadecimal */
+    color: #ffffff;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 20px; /* Convertido de 1.25rem a px */
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu,
+    .cerrar-menu {
+        color: #ffffff;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 16px; /* Convertido de 1rem a px */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c; /* Color hexadecimal */
+        padding: 32px; /* Convertido de 2rem a px */
+        box-shadow: 0 0 0 100vmax #000000; /* Color hexadecimal */
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
+    }
+}
+
+/* Sección de Hero */
+.hero {
+    background: linear-gradient(135deg, #009c8c, #000080); /* Colores hexadecimales */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px; /* Convertido de rem a px */
+}
+
+.hero h1 { font-size: 48px; margin-bottom: 10px; }
+.hero p { font-size: 19.2px; margin-bottom: 20px; }
+
+.hero button {
+    padding: 15px 30px;
+    font-size: 19.2px; /* Convertido de 1.2rem a px */
+    color: #fff;
+    background-color: #009c8c; /* Color hexadecimal */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #000080; /* Color hexadecimal */
+}
+
+/* Sección de Servicios */
+#servicios {
+    padding: 60px 20px; /* Convertido de rem a px */
+    background-color: #fff;
+    text-align: center;
+}
+
+#servicios h2 {
+    color: #000080; /* Color hexadecimal */
+    margin-bottom: 30px;
+}
+
+.servicios-detalle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Convertido de rem a px */
+}
+
+.servicio {
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Color hexadecimal */
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.servicio:hover {
+    transform: scale(1.05);
+}
+
+.servicio h3 { color: #000080; /* Color hexadecimal */ }
+.servicio ul { list-style: none; padding: 0; }
+.servicio ul li { margin: 10px 0; color: #555; }
+
+/* Estilos para la Sección Acerca de */
+.acerca-de {
+    background-color: #ffffff;
+    padding: 40px 20px; /* Convertido de rem a px */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Color hexadecimal */
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.acerca-de h2 {
+    color: #000080; /* Color hexadecimal */
+    margin-bottom: 20px;
+    font-size: 40px; /* Convertido de rem a px */
+}
+
+.acerca-de p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 17.6px; /* Convertido de rem a px */
+    line-height: 1.6;
+}
+
+.servicios-disponibles {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.servicios-disponibles h3 {
+    color: #000080; /* Color hexadecimal */
+    margin-bottom: 15px;
+    font-size: 28.8px; /* Convertido de rem a px */
+}
+
+.servicios-disponibles ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.servicios-disponibles ul li {
+    margin: 10px 0;
+    color: #555;
+    padding-left: 20px;
+    position: relative;
+}
+
+.servicios-disponibles ul li::before {
+    content: '✔';
+    color: #009c8c; /* Color hexadecimal */
+    position: absolute;
+    left: 0;
+    font-size: 19.2px; /* Convertido de rem a px */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .acerca-de {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .acerca-de h2 {
+        font-size: 32px; /* Convertido de rem a px */
+    }
+
+    .servicios-disponibles ul li {
+        padding-left: 25px; /* Convertido de rem a px */
+    }
+}
+
+/* Sección de Expertos */
+.expertos {
+    background-color: #f9f9f9;
+    padding: 40px 20px; /* Convertido de rem a px */
+    text-align: center;
+}
+
+.expertos h2 {
+    color: #000080; /* Color hexadecimal */
+    margin-bottom: 30px;
+}
+
+.experto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Color hexadecimal */
+}
+
+.experto img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.experto h3 {
+    font-size: 19.2px; /* Convertido de rem a px */
+    color: #000080; /* Color hexadecimal */
+    margin-bottom: 10px;
+}
+
+.rating {
+    direction: rtl;
+    font-size: 24px; /* Convertido de rem a px */
+    unicode-bidi: bidi-override;
+    margin: 10px 0;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    color: #ccc;
+    font-size: 24px; /* Convertido de rem a px */
+}
+
+.rating input:checked ~ label {
+    color: gold;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+
+/* Sección de Contacto */
+#contacto {
+    background-color: #ffffff;
+    padding: 40px 20px; /* Convertido de rem a px */
+    text-align: center;
+}
+
+#contacto h2 {
+    color: #000080; /* Color hexadecimal */
+    margin-bottom: 20px;
+}
+
+#contacto form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Convertido de rem a px */
+}
+
+#contacto input,
+#contacto textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contacto button {
+    padding: 15px;
+    background-color: #009c8c; /* Color hexadecimal */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contacto button:hover {
+    background-color: #000080; /* Color hexadecimal */
+}
+
+/* Pie de Página */
+footer {
+    background-color: #333; /* Color hexadecimal */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0; /* Convertido de rem a px */
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px; /* Convertido de rem a px */
+}

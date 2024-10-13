@@ -1,0 +1,257 @@
+/* Estilos Generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: #ffffff;
+}
+
+h1 { font-size: 48px; } /* 3em a px */
+h2 { font-size: 40px; } /* 2.5em a px */
+h3 { font-size: 24px; } /* 1.5em a px */
+
+/* Encabezado y Navegación */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px; /* 2rem a px */
+    background-color: #000080;
+}
+
+.logo {
+    max-width: 80px; /* 5rem a px */
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 16px; /* 1rem a px */
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cambiar color al pasar el ratón por encima */
+.nav-list li a:hover {
+    background-color: #009c8c; /* Color de fondo que prefieras */
+    color: #ffffff;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 20px; /* 1.25rem a px */
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #ffffff;
+    }
+
+    .cerrar-menu {
+        color: #ffffff;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 16px; /* 1rem a px */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 32px; /* 2rem a px */
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ecececec;
+    }
+}
+
+/* Sección de Hero */
+.hero {
+    background: linear-gradient(135deg, #009c8c, #000080);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    background-size: cover;
+}
+
+.hero h1 { font-size: 48px; margin-bottom: 10px; } /* 3em a px */
+.hero p { font-size: 19.2px; margin-bottom: 20px; } /* 1.2em a px */
+
+.hero button {
+    padding: 15px 30px;
+    font-size: 19.2px; /* 1.2em a px */
+    color: #fff;
+    background-color: #009c8c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #000080;
+}
+
+/* Sección de Servicios */
+#servicios {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#servicios h2 {
+    color: #000080;
+    margin-bottom: 30px;
+}
+
+.servicios-detalle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* 20px ya está en px */
+}
+
+.servicio {
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px #0000001a; /* rgba(0, 0, 0, 0.1) a hex */
+    padding: 20px; /* 20px ya está en px */
+    width: 300px; /* 300px ya está en px */
+    transition: transform 0.3s ease;
+}
+
+.servicio:hover {
+    transform: scale(1.05);
+}
+
+.servicio h3 { color: #000080; }
+.servicio ul { list-style: none; padding: 0; }
+.servicio ul li { margin: 10px 0; color: #555; }
+
+/* Sección de Contacto */
+#contacto {
+    background-color: #009c8c;
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#contacto h2 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+form input, form textarea {
+    width: calc(100% - 20px);
+    padding: 10px; /* 10px ya está en px */
+    margin-bottom: 20px; /* 20px ya está en px */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* 1em a px */
+}
+
+form button {
+    background-color: #fff;
+    color: #000080;
+    border: none;
+    padding: 15px 30px; /* 15px a px */
+    font-size: 16px; /* 1em a px */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #009c8c;
+}
+
+/* Sección de Preguntas Frecuentes */
+#faq {
+    background-color: #f3f4f6;
+    padding: 120px 20px; /* Reducido de 480px a 240px */
+    text-align: center;
+}
+
+#faq h2 {
+    color: #000080;
+    margin-bottom: 20px; /* Reducido de 30px a 20px */
+}
+details {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #0000001a; /* rgba(0, 0, 0, 0.1) a hex */
+    padding: 15px; /* 15px ya está en px */
+    margin-bottom: 20px; /* 20px ya está en px */
+    cursor: pointer;
+}
+
+details summary {
+    font-weight: 600;
+    font-size: 17.6px; /* 1.1em a px */
+    color: #555;
+}
+
+/* Pie de Página */
+footer {
+    background-color: #333; /* Color hexadecimal */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0; /* 20px ya está en px */
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px; /* 16px ya está en px */
+}
