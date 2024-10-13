@@ -86,10 +86,10 @@
         <h2>Contacto Directo</h2>
         <form action="enviar_mensaje.php" method="post">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" required pattern="[A-Za-záéíóúÁÉÍÓÚÑñ\s]+" title="Solo se permiten letras">
 
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required>
+            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]+" title="Solo se permiten números">
 
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
@@ -97,6 +97,7 @@
             <button type="submit">Enviar</button>
         </form>
     </section>
+
 
     <!-- Sección de Preguntas y Respuestas Frecuentes -->
     <section id="faq">
@@ -128,3 +129,33 @@
 </body>
 
 </html>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtener y sanitizar los datos del formulario
+    $nombre = htmlspecialchars(trim($_POST['nombre']));
+    $telefono = htmlspecialchars(trim($_POST['telefono']));
+    $mensaje = htmlspecialchars(trim($_POST['mensaje']));
+
+    // Validación del nombre (solo letras)
+    if (!preg_match("/^[A-Za-záéíóúÁÉÍÓÚÑñ\s]+$/", $nombre)) {
+        die("Error: El nombre solo debe contener letras.");
+    }
+
+    // Validación del teléfono (solo números)
+    if (!preg_match("/^[0-9]+$/", $telefono)) {
+        die("Error: El teléfono solo debe contener números.");
+    }
+
+    // Formatear el mensaje a guardar
+    $contenido = "Nombre: $nombre\nTeléfono: $telefono\nMensaje: $mensaje\n\n";
+
+    // Guardar el mensaje en un archivo de texto
+    $archivo = 'mensajes.txt'; // Nombre del archivo donde se guardarán los mensajes
+    if (file_put_contents($archivo, $contenido, FILE_APPEND | LOCK_EX) !== false) {
+        echo "Mensaje enviado correctamente y guardado en el archivo.";
+    } else {
+        echo "Error: No se pudo guardar el mensaje. Verifique los permisos del archivo.";
+    }
+}
+?>
