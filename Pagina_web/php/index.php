@@ -2,32 +2,28 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/estilo.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
-  <title>Servicios Emergencia</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Servicios Emergencia</title>
 </head>
 
 <body>
     <!-- Encabezado con Navegación -->
     <header>
-        <nav class="contenedor">
-            <div class="logo">
-                <img src="Imagenes/Logo.png" alt="Logo de Servicios de Emergencia">
-            </div>
-
-            <div class="enlaces">
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Acerca de los Servicios</a>
-                <a href="#contacto">Contacto Directo</a>
-                <a href="#faq">Preguntas y Respuestas</a>
-            </div>
-
-            <div class="hamburguesa">
-                <img src="https://cdn-icons-png.flaticon.com/512/8777/8777583.png" alt="Menú" id="hamburguesa">
-            </div>
+        <img class="logo" src="../Imagenes/Posible4.jpg" alt="Logo">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Acerca de los Servicios</a></li>
+                <li><a href="#contacto">Contacto Directo</a></li>
+                <li><a href="#faq">Preguntas y Respuestas</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -41,49 +37,49 @@
     </section>
 
     <section id="servicios">
-      <h2>Acerca de Nuestros Servicios</h2>
-      <p>Ofrecemos una variedad de servicios de emergencia para el hogar, disponibles las 24 horas del día.</p>
-      
-      <!-- Servicios -->
-      <div class="servicios-detalle">
-          <div class="servicio">
-            <h3> <a href="Fontaneria.php"> Fontanería</h3>
-              <ul>
-                <li>Reparación de fugas de agua</li>
-                <li>Desatasco de tuberías</li>
-                <li>Instalación y mantenimiento de calentadores</li>
-                <li>Reparación de sanitarios</li>
-            </ul> </a>
-          </div>
-          <div class="servicio">
-              <h3> <a href="Electricidad.php"> Electricidad</h3>
-              <ul>
-                  <li>Reparación de cortocircuitos y fallos eléctricos</li>
-                  <li>Instalación de nuevas tomas de corriente</li>
-                  <li>Mantenimiento de instalaciones eléctricas</li>
-                  <li>Instalación de iluminación</li>
-              </ul> </a>
-          </div>
-          <div class="servicio">
-              <h3> <a href="Cerrajeria.php"> Cerrajería</h3>
-              <ul>
-                  <li>Apertura de puertas bloqueadas</li>
-                  <li>Cambio de cerraduras</li>
-                  <li>Reparación de puertas dañadas</li>
-                  <li>Instalación de sistemas de seguridad</li>
-              </ul> </a>
-          </div>
-          <div class="servicio">
-              <h3> <a href="Vidrieria.php"> Vidriería</h3>
-              <ul>
-                  <li>Reemplazo de vidrios rotos</li>
-                  <li>Instalación de cristales de seguridad</li>
-                  <li>Reparación de marcos de ventanas y puertas</li>
-                  <li>Colocación de espejos y paneles de vidrio</li>
-              </ul> </a>
-          </div>
-      </div>
-  </section>  
+        <h2>Acerca de Nuestros Servicios</h2>
+        <p>Ofrecemos una variedad de servicios de emergencia para el hogar, disponibles las 24 horas del día.</p>
+
+        <!-- Servicios -->
+        <div class="servicios-detalle">
+            <div class="servicio">
+                <h3><a href="Fontaneria.php">Fontanería </h3>
+                <ul>
+                    <li>Reparación de fugas de agua</li>
+                    <li>Desatasco de tuberías</li>
+                    <li>Instalación y mantenimiento de calentadores</li>
+                    <li>Reparación de sanitarios</li>
+                </ul>
+            </div> </a>
+            <div class="servicio">
+                <h3><a href="Electricidad.php">Electricidad </h3>
+                <ul>
+                    <li>Reparación de cortocircuitos y fallos eléctricos</li>
+                    <li>Instalación de nuevas tomas de corriente</li>
+                    <li>Mantenimiento de instalaciones eléctricas</li>
+                    <li>Instalación de iluminación</li>
+                </ul>
+            </div> </a>
+            <div class="servicio">
+                <h3><a href="Cerrajeria.php">Cerrajería</h3>
+                <ul>
+                    <li>Apertura de puertas bloqueadas</li>
+                    <li>Cambio de cerraduras</li>
+                    <li>Reparación de puertas dañadas</li>
+                    <li>Instalación de sistemas de seguridad</li>
+                </ul>
+            </div> </a>
+            <div class="servicio">
+                <h3><a href="Vidrieria.php">Vidriería</h3>
+                <ul>
+                    <li>Reemplazo de vidrios rotos</li>
+                    <li>Instalación de cristales de seguridad</li>
+                    <li>Reparación de marcos de ventanas y puertas</li>
+                    <li>Colocación de espejos y paneles de vidrio</li>
+                </ul>
+            </div> </a>
+        </div>
+    </section>
 
     <!-- Sección de Contacto -->
     <section id="contacto">
@@ -91,7 +87,7 @@
         <form action="enviar_mensaje.php" method="post">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
-            
+
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" required>
 
@@ -120,15 +116,15 @@
     <footer>
         <p>&copy; 2024 Servicios de Emergencia. Todos los derechos reservados.</p>
         <div class="social-media">
-            <a href="#"><img src="icono-facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="icono-twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="icono-instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/"><img src="../Imagenes/facebook.png" alt="Facebook" class="social-icon" style="width: 70px; height: 70px;"></a>
+            <a href="https://x.com/"><img src="../Imagenes/X.png" alt="Twitter" class="social-icon" style="width: 70px; height: 70px;"></a>
+            <a href="https://www.instagram.com/"><img src="../Imagenes/instagram.png" alt="Instagram" class="social-icon" style="width: 70px; height: 70px;"></a>
         </div>
         <p>Teléfono: 123-456-7890 | Dirección: Calle Falsa 123, Ciudad</p>
     </footer>
 
     <!-- Script para el menú hamburguesa -->
-    <script src="Menuhamburguesa.js"></script>
+    <script src="../js/MenuHamburguesa.js"></script>
 </body>
 
 </html>
