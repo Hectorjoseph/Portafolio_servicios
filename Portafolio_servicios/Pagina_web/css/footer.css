@@ -1,0 +1,13 @@
+/* Pie de Página */
+footer {
+    background-color: #333; /* Color hexadecimal */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0; /* Convertido de rem a px */
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px; /* Convertido de rem a px */
+}
